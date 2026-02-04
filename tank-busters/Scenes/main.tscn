@@ -61,11 +61,11 @@ shape = SubResource("WorldBoundaryShape2D_21xkr")
 position = Vector2(533, 38)
 
 [node name="Minutes" type="Label" parent="Timer" unique_id=2067209965]
-offset_left = -576.0
-offset_top = -199.0
-offset_right = -536.0
-offset_bottom = -176.0
-scale = Vector2(0.827778, 0.79899025)
+offset_left = -573.0
+offset_top = -198.99998
+offset_right = -533.0
+offset_bottom = -175.99998
+scale = Vector2(0.8324436, 0.79899025)
 text = "00:"
 horizontal_alignment = 2
 
@@ -74,15 +74,15 @@ offset_left = -553.0
 offset_top = -199.0
 offset_right = -513.0
 offset_bottom = -176.0
-scale = Vector2(0.827778, 0.79899025)
+scale = Vector2(0.8324436, 0.79899025)
 text = "00."
 horizontal_alignment = 2
 
 [node name="Msecs" type="Label" parent="Timer" unique_id=85103321]
-offset_left = -530.0
+offset_left = -537.0
 offset_top = -199.0
-offset_right = -490.0
+offset_right = -497.0
 offset_bottom = -176.0
-scale = Vector2(0.827778, 0.79899025)
+scale = Vector2(0.8324436, 0.79899025)
 text = "00"
 horizontal_alignment = 2
