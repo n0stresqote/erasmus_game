@@ -2,8 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://c1qjkardkn5do" path="res://Assets/bg_placeholder.png" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://conbevxco65xn" path="res://Scenes/player1.tscn" id="2_bo1nx"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://bdh1mtju47edc" path="res://Scenes/player_2.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://cwosnnfb3hpbs" path="res://Scenes/Timer.tscn" id="4_jjvhh"]
+=======
+[ext_resource type="PackedScene" path="res://Scenes/player_2.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://b6s2eqstpfrph" path="res://Scenes/tile_map.tscn" id="4_jjvhh"]
+>>>>>>> Stashed changes
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8gbba"]
 distance = -160.0
@@ -53,6 +58,7 @@ shape = SubResource("WorldBoundaryShape2D_kry3j")
 position = Vector2(-166, 0)
 shape = SubResource("WorldBoundaryShape2D_21xkr")
 
+<<<<<<< Updated upstream
 [node name="Timer" parent="." unique_id=1869915896 instance=ExtResource("4_jjvhh")]
 position = Vector2(508, 31)
 
@@ -79,3 +85,6 @@ offset_right = -475.0
 offset_bottom = -171.0
 text = "00"
 horizontal_alignment = 2
+=======
+[node name="TileMap" parent="." unique_id=255370171 instance=ExtResource("4_jjvhh")]
+>>>>>>> Stashed changes
