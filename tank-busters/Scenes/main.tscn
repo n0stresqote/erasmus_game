@@ -2,9 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://c1qjkardkn5do" path="res://Assets/bg_placeholder.png" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://conbevxco65xn" path="res://Scenes/player1.tscn" id="2_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://bdh1mtju47edc" path="res://Scenes/player_2.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" path="res://Scenes/player_2.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dy4i4107cx6l8" path="res://Scenes/bullet.tscn" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://cwosnnfb3hpbs" path="res://Scenes/Timer.tscn" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://b6s2eqstpfrph" path="res://Scenes/tile_map.tscn" id="6_21xkr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8gbba"]
 distance = -160.0
@@ -86,3 +87,5 @@ offset_bottom = -176.0
 scale = Vector2(0.8324436, 0.79899025)
 text = "00"
 horizontal_alignment = 2
+
+[node name="TileMap" parent="." unique_id=255370171 instance=ExtResource("6_21xkr")]
