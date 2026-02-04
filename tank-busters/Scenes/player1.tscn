@@ -17,4 +17,7 @@ texture = ExtResource("1_n6hdu")
 
 [node name="Timer" type="Timer" parent="." unique_id=131356417]
 
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1466912493]
+position = Vector2(0, -10)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
