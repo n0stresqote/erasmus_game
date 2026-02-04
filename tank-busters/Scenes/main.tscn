@@ -13,3 +13,5 @@ zoom = Vector2(2.025, 2.025)
 
 [node name="player1" parent="." unique_id=603012136 instance=ExtResource("2_bo1nx")]
 position = Vector2(0, 138)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=231981767]
