@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://conbevxco65xn"]
 
 [ext_resource type="Texture2D" uid="uid://xkxb0vocsktb" path="res://Assets/tank_placeholder.png" id="1_n6hdu"]
-[ext_resource type="Script" uid="uid://djlvr2haxje4k" path="res://Scenes/player_1.gd" id="1_ndhuy"]
+[ext_resource type="Script" uid="uid://b6sq1qs4evg68" path="res://Scripts/player_1.gd" id="1_ndhuy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ndhuy"]
 size = Vector2(14, 14)
