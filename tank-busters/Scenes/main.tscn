@@ -2,8 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://c1qjkardkn5do" path="res://Assets/bg_placeholder.png" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://conbevxco65xn" path="res://Scenes/player1.tscn" id="2_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://dmy3wrgh4363g" path="res://Scenes/player_2.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://bdh1mtju47edc" path="res://Scenes/player_2.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dy4i4107cx6l8" path="res://Scenes/bullet.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://cwosnnfb3hpbs" path="res://Scenes/Timer.tscn" id="5_kry3j"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8gbba"]
 distance = -160.0
@@ -55,3 +56,33 @@ shape = SubResource("WorldBoundaryShape2D_kry3j")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Edges_Collision" unique_id=708124842]
 position = Vector2(-166, 0)
 shape = SubResource("WorldBoundaryShape2D_21xkr")
+
+[node name="Timer" parent="." unique_id=1869915896 instance=ExtResource("5_kry3j")]
+position = Vector2(533, 38)
+
+[node name="Minutes" type="Label" parent="Timer" unique_id=2067209965]
+offset_left = -576.0
+offset_top = -199.0
+offset_right = -536.0
+offset_bottom = -176.0
+scale = Vector2(0.827778, 0.79899025)
+text = "00:"
+horizontal_alignment = 2
+
+[node name="Seconds" type="Label" parent="Timer" unique_id=2046590323]
+offset_left = -553.0
+offset_top = -199.0
+offset_right = -513.0
+offset_bottom = -176.0
+scale = Vector2(0.827778, 0.79899025)
+text = "00."
+horizontal_alignment = 2
+
+[node name="Msecs" type="Label" parent="Timer" unique_id=85103321]
+offset_left = -530.0
+offset_top = -199.0
+offset_right = -490.0
+offset_bottom = -176.0
+scale = Vector2(0.827778, 0.79899025)
+text = "00"
+horizontal_alignment = 2

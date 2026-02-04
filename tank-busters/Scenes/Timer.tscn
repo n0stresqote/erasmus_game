@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cwosnnfb3hpbs"]
 
-[ext_resource type="Script" uid="uid://dn8qml3ed0ado" path="res://timer.gd" id="1_notwg"]
+[ext_resource type="Script" uid="uid://dn8qml3ed0ado" path="res://Scripts/timer.gd" id="1_notwg"]
 
 [node name="Timer" type="Node2D" unique_id=1869915896]
 script = ExtResource("1_notwg")
@@ -33,3 +33,11 @@ offset_right = 86.0
 offset_bottom = 23.0
 text = "00"
 horizontal_alignment = 2
+
+[node name="Information" type="Label" parent="." unique_id=227371700]
+offset_left = 0.9999981
+offset_top = 93.0
+offset_right = 520.0
+offset_bottom = 116.0
+scale = Vector2(0.560023, 0.93554646)
+text = "If added into a scene, remember to paste it without the \"Panel\""
