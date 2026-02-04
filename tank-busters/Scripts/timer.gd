@@ -10,7 +10,8 @@ func _process(delta: float) -> void:
 
 	if total_time <= 0.0:
 		total_time = 0.0
-		set_process(false)
+		get_tree().paused = true
+		return
 
 	msec = int(fmod(total_time, 1.0) * 100)
 	seconds = int(fmod(total_time, 60))
