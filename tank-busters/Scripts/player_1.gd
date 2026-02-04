@@ -1,6 +1,10 @@
 extends CharacterBody2D
 
 const SPEED = 80.0
+var spawn_position = Vector2(0,130)
+
+@onready var timer: Timer = $Timer
+
 
 # arrow keys movement
 
@@ -18,3 +22,14 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(Vector2.ZERO, SPEED)
 
 	move_and_slide()
+	
+func reset_player():
+	queue_free()
+	timer.start()
+	
+	global_position = spawn_position
+	rotation_degrees = 0
+
+
+func _on_timer_timeout() -> void:
+	pass # Replace with function body.

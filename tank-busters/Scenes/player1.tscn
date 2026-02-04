@@ -6,11 +6,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ndhuy"]
 size = Vector2(14, 14)
 
-[node name="player1" type="CharacterBody2D" unique_id=603012136]
+[node name="player1" type="CharacterBody2D" unique_id=603012136 groups=["players"]]
 script = ExtResource("1_ndhuy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=713726087]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=713726087 groups=["players"]]
 shape = SubResource("RectangleShape2D_ndhuy")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=50748325]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=50748325 groups=["players"]]
 texture = ExtResource("1_n6hdu")
+
+[node name="Timer" type="Timer" parent="." unique_id=131356417]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
