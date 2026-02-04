@@ -2,7 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://c1qjkardkn5do" path="res://Assets/bg_placeholder.png" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://conbevxco65xn" path="res://Scenes/player1.tscn" id="2_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://dxg3afxctbwue" path="res://player_2.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://bdh1mtju47edc" path="res://Scenes/player_2.tscn" id="3_8gbba"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8gbba"]
+distance = -160.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjvhh"]
+normal = Vector2(-0.23141664, 0.97285473)
+distance = -158.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kry3j"]
+normal = Vector2(0.008504569, -0.9999638)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_21xkr"]
+normal = Vector2(1, 0)
+distance = 6.0
 
 [node name="Main" type="Node2D" unique_id=1481846139]
 
@@ -13,6 +27,27 @@ texture = ExtResource("1_jjgbg")
 zoom = Vector2(2.025, 2.025)
 
 [node name="player1" parent="." unique_id=603012136 instance=ExtResource("2_bo1nx")]
-position = Vector2(0, 138)
+position = Vector2(0, 132)
 
 [node name="player2" parent="." unique_id=1884065830 instance=ExtResource("3_8gbba")]
+position = Vector2(0, -131.99998)
+rotation = -3.1393776
+
+[node name="Edges_Collision" type="StaticBody2D" parent="." unique_id=70091877]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Edges_Collision" unique_id=23588409]
+shape = SubResource("WorldBoundaryShape2D_8gbba")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Edges_Collision" unique_id=390444437]
+position = Vector2(0, -2)
+rotation = -0.2335336
+shape = SubResource("WorldBoundaryShape2D_jjvhh")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Edges_Collision" unique_id=1965168579]
+position = Vector2(160, 0)
+rotation = -1.579301
+shape = SubResource("WorldBoundaryShape2D_kry3j")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Edges_Collision" unique_id=708124842]
+position = Vector2(-166, 0)
+shape = SubResource("WorldBoundaryShape2D_21xkr")

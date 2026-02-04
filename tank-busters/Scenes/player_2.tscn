@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://bdh1mtju47edc"]
 
-[ext_resource type="Script" uid="uid://6nfd4s8s3pee" path="res://Scripts/player_2.gd" id="1_mkara"]
+[ext_resource type="Script" uid="uid://6nfd4s8s3pee" path="res://Scripts/player_2.gd" id="1_wkcja"]
+[ext_resource type="Texture2D" uid="uid://xkxb0vocsktb" path="res://Assets/tank_placeholder.png" id="2_8xjnt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkara"]
 
 [node name="player2" type="CharacterBody2D" unique_id=2017270775]
-script = ExtResource("1_mkara")
+script = ExtResource("1_wkcja")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=71647752]
+shape = SubResource("RectangleShape2D_mkara")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1583247447]
+texture = ExtResource("2_8xjnt")
