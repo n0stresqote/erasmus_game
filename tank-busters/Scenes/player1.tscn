@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://conbevxco65xn"]
+
+[ext_resource type="Texture2D" uid="uid://xkxb0vocsktb" path="res://Assets/tank_placeholder.png" id="1_n6hdu"]
+[ext_resource type="Script" uid="uid://djlvr2haxje4k" path="res://Scenes/player_1.gd" id="1_ndhuy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndhuy"]
+size = Vector2(14, 14)
+
+[node name="player1" type="CharacterBody2D" unique_id=603012136]
+script = ExtResource("1_ndhuy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=713726087]
+shape = SubResource("RectangleShape2D_ndhuy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=50748325]
+texture = ExtResource("1_n6hdu")

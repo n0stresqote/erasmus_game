@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dncfn4vt47mf7"]
+
+[ext_resource type="Texture2D" uid="uid://c1qjkardkn5do" path="res://Assets/bg_placeholder.png" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://conbevxco65xn" path="res://Scenes/player1.tscn" id="2_bo1nx"]
+
+[node name="Main" type="Node2D" unique_id=1481846139]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1499496354]
+texture = ExtResource("1_jjgbg")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1538553070]
+zoom = Vector2(2.025, 2.025)
+
+[node name="player1" parent="." unique_id=603012136 instance=ExtResource("2_bo1nx")]
+position = Vector2(0, 138)
