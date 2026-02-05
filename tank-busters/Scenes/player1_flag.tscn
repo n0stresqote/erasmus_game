@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://biv1h17nbkfaj"]
+
+[ext_resource type="Script" uid="uid://cond81fddvvj7" path="res://Scripts/flag.gd" id="1_vwf64"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3hto"]
+
+[node name="Player1Flag" type="Node2D" unique_id=1959672777]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1006966426]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1861109889]
+
+[node name="flag" type="Area2D" parent="." unique_id=663995]
+script = ExtResource("1_vwf64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flag" unique_id=1075304780]
+shape = SubResource("RectangleShape2D_t3hto")

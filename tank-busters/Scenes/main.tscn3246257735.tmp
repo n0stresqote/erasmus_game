@@ -9,7 +9,6 @@
 [ext_resource type="Script" uid="uid://cond81fddvvj7" path="res://Scripts/flag.gd" id="7_6bp64"]
 [ext_resource type="Script" uid="uid://byees02qklr62" path="res://Scripts/flag2.gd" id="8_344ge"]
 [ext_resource type="Texture2D" uid="uid://yuid5a0jhe5i" path="res://Assets/tileset.png" id="8_ynf5e"]
-[ext_resource type="Script" uid="uid://c3vw868n23dkh" path="res://Scenes/score2.gd" id="10_hptm8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8gbba"]
 distance = -160.0
@@ -98,12 +97,11 @@ texture = ExtResource("1_jjgbg")
 zoom = Vector2(2.025, 2.025)
 
 [node name="player1" parent="." unique_id=603012136 instance=ExtResource("2_bo1nx")]
-position = Vector2(0, -134.99998)
-rotation = 3.1412122
+position = Vector2(0, 130)
 
 [node name="player2" parent="." unique_id=1884065830 instance=ExtResource("3_8gbba")]
-position = Vector2(1.9895197e-13, 135.00002)
-rotation = -0.014422253
+position = Vector2(0, -135)
+rotation = -3.1393776
 
 [node name="bullet" parent="." unique_id=200096321 instance=ExtResource("4_jjvhh")]
 position = Vector2(-54, 73)
@@ -171,14 +169,6 @@ position = Vector2(-126, 125)
 scale = Vector2(1.125, 1.125)
 sprite_frames = SubResource("SpriteFrames_fdnlq")
 
-[node name="score1" type="Label" parent="flag" unique_id=1094842198]
-offset_left = -216.0
-offset_top = -164.0
-offset_right = -176.0
-offset_bottom = -141.0
-text = "0"
-horizontal_alignment = 2
-
 [node name="flag2" type="Area2D" parent="." unique_id=1000138208]
 position = Vector2(-70, 6)
 script = ExtResource("8_344ge")
@@ -191,16 +181,6 @@ shape = SubResource("RectangleShape2D_ynf5e")
 position = Vector2(197, -133)
 scale = Vector2(1.125, 1.0625)
 sprite_frames = SubResource("SpriteFrames_h1bgf")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1478700744]
-
-[node name="score2" type="Label" parent="CanvasLayer" unique_id=239001811]
-offset_left = 177.0
-offset_top = 139.0
-offset_right = 217.0
-offset_bottom = 162.0
-text = "0"
-script = ExtResource("10_hptm8")
 
 [connection signal="body_entered" from="flag" to="flag" method="_on_body_entered"]
 [connection signal="body_entered" from="flag2" to="flag2" method="_on_body_entered"]

@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 80.0
 var spawn_position = Vector2(0,130)
+var score = 0
 
 @onready var timer: Timer = $Timer
 
