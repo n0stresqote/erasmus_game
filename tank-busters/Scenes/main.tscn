@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://dncfn4vt47mf7"]
 
-[ext_resource type="Texture2D" uid="uid://c1qjkardkn5do" path="res://Assets/bg_placeholder.png" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://bpetwceo8c7b6" path="res://Assets/backround3.png" id="1_21xkr"]
 [ext_resource type="PackedScene" uid="uid://conbevxco65xn" path="res://Scenes/player1.tscn" id="2_bo1nx"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://bdh1mtju47edc" path="res://Scenes/player_2.tscn" id="3_8gbba"]
+=======
+[ext_resource type="PackedScene" uid="uid://dmy3wrgh4363g" path="res://Scenes/player_2.tscn" id="3_8gbba"]
+>>>>>>> 6c7dba468993fcdf8a096957863c4d5f056dee31
 [ext_resource type="PackedScene" uid="uid://dy4i4107cx6l8" path="res://Scenes/bullet.tscn" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://cwosnnfb3hpbs" path="res://Scenes/Timer.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://b6s2eqstpfrph" path="res://Scenes/tile_map.tscn" id="6_21xkr"]
@@ -92,7 +96,9 @@ animations = [{
 [node name="Main" type="Node2D" unique_id=1481846139]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1499496354]
-texture = ExtResource("1_jjgbg")
+position = Vector2(2.4999938, 0.49999428)
+scale = Vector2(1.8611112, 1.8833334)
+texture = ExtResource("1_21xkr")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1538553070]
 zoom = Vector2(2.025, 2.025)
