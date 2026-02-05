@@ -4,6 +4,7 @@ const SPEED = 80.0
 var spawn_position = Vector2(0,130)
 var can_shoot = true
 var dead = false
+var score = 0
 
 @onready var timer: Timer = $Timer
 

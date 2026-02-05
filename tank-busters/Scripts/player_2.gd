@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 80.0
+var score2 = 0
 
 # wasd movement
 
