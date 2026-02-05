@@ -1,19 +1,25 @@
 extends Area2D
 
-var SPEED = 32
-var direction = Vector2.ZERO
+var SPEED = 320
+var shooter
+var direction: Vector2 = Vector2.ZERO
 
-func _physics_process(delta):
-		position += transform.x * SPEED * delta
-		
+
+
+func _physics_process(delta: float) -> void:
+	position += direction * SPEED * delta
+
+
 
 func _on_body_entered(body):
-	print("detect1")
-	#if body is TileMapLayer:
-		#pass
+	if body is TileMapLayer:
+		print("detected")
+		shooter.reload()
+		queue_free()
 	if body.is_in_group("players"):
-		print("detect2")
 		body.reset_player()
+		
+		shooter.reload()
 		queue_free()
 
 
