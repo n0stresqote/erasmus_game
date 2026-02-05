@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://btkgu7d2o1sgc" path="res://Assets/bullet_placeholder.png" id="1_xjght"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oduel"]
-size = Vector2(4, 4)
+size = Vector2(0, 0)
 
 [node name="bullet" type="Area2D" unique_id=200096321]
 script = ExtResource("1_oduel")
@@ -13,6 +13,7 @@ script = ExtResource("1_oduel")
 shape = SubResource("RectangleShape2D_oduel")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=395333094]
+scale = Vector2(0.375, 1)
 texture = ExtResource("1_xjght")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

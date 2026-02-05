@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dmy3wrgh4363g"]
 
 [ext_resource type="Script" uid="uid://6nfd4s8s3pee" path="res://Scripts/player_2.gd" id="1_wkcja"]
-[ext_resource type="Texture2D" uid="uid://xkxb0vocsktb" path="res://Assets/tank_placeholder.png" id="2_8xjnt"]
+[ext_resource type="Texture2D" uid="uid://c6db8xxm3ot88" path="res://Assets/playerRed.png" id="2_cgts5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkara"]
 size = Vector2(14, 14)
@@ -13,4 +13,11 @@ script = ExtResource("1_wkcja")
 shape = SubResource("RectangleShape2D_mkara")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1583247447 groups=["players"]]
-texture = ExtResource("2_8xjnt")
+texture = ExtResource("2_cgts5")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1663427818]
+position = Vector2(0, -11)
+
+[node name="Timer" type="Timer" parent="." unique_id=1465169101]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
