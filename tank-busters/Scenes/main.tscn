@@ -2,12 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://c1qjkardkn5do" path="res://Assets/bg_placeholder.png" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://conbevxco65xn" path="res://Scenes/player1.tscn" id="2_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://bdh1mtju47edc" path="res://Scenes/player_2.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" path="res://Scenes/player_2.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dy4i4107cx6l8" path="res://Scenes/bullet.tscn" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://cwosnnfb3hpbs" path="res://Scenes/Timer.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://b6s2eqstpfrph" path="res://Scenes/tile_map.tscn" id="6_21xkr"]
-[ext_resource type="PackedScene" uid="uid://1opvkms3hhum" path="res://Scenes/player_1_flag.tscn" id="7_6bp64"]
-[ext_resource type="Texture2D" uid="uid://yuid5a0jhe5i" path="res://Assets/tileset.png" id="8_344ge"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8gbba"]
 distance = -160.0
@@ -22,38 +20,6 @@ normal = Vector2(0.008504569, -0.9999638)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_21xkr"]
 normal = Vector2(1, 0)
 distance = 6.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hywk6"]
-atlas = ExtResource("8_344ge")
-region = Rect2(32, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h5kni"]
-atlas = ExtResource("8_344ge")
-region = Rect2(48, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i5j56"]
-atlas = ExtResource("8_344ge")
-region = Rect2(64, 16, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ynf5e"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hywk6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h5kni")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i5j56")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hptm8"]
-size = Vector2(11, 15)
 
 [node name="Main" type="Node2D" unique_id=1481846139]
 
@@ -123,13 +89,3 @@ text = "00"
 horizontal_alignment = 2
 
 [node name="TileMap" parent="." unique_id=255370171 instance=ExtResource("6_21xkr")]
-
-[node name="player1flag" parent="." unique_id=449157449 instance=ExtResource("7_6bp64")]
-position = Vector2(-137, 135)
-
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="player1flag" unique_id=1949145145]
-sprite_frames = SubResource("SpriteFrames_ynf5e")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="player1flag" unique_id=639157119]
-position = Vector2(-0.5, 0.5)
-shape = SubResource("RectangleShape2D_hptm8")
