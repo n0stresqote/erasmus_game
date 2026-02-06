@@ -44,6 +44,7 @@ func _on_timer_timeout() -> void:
 	show()
 	dead = false
 	timer.stop()
+	Main.game_paused = false
 
 	
 func reload():

@@ -15,6 +15,16 @@ run/main_scene="uid://dncfn4vt47mf7"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Main="*uid://c3ln4247717od"
+
+[display]
+
+window/size/mode=4
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [global_group]
 
 players=""

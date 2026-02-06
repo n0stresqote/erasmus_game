@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c2rgfgomwp0i0"]
+
+[node name="Player1ScoreLabel" type="Label" unique_id=828780874]
+offset_right = 163.0
+offset_bottom = 23.0
+text = "Blue player: 0 Points"
+uppercase = true

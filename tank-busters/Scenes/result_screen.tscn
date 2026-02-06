@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cjw2vhcjvsjsc"]
+
+[ext_resource type="Texture2D" uid="uid://c1qjkardkn5do" path="res://Assets/bg_placeholder.png" id="1_qtxv5"]
+[ext_resource type="Script" uid="uid://cseejodjd1v3f" path="res://Scenes/result_screen.gd" id="2_t0wn3"]
+
+[node name="result_screen" type="Sprite2D" unique_id=443076436]
+z_index = 2
+scale = Vector2(1.7125, 1.7125)
+texture = ExtResource("1_qtxv5")
+script = ExtResource("2_t0wn3")
+
+[node name="Label" type="Label" parent="." unique_id=1689165710]
+offset_left = -36.20438
+offset_top = -28.613138
+offset_right = 34.79562
+offset_bottom = -5.613138
+text = "RESULTS:"
+
+[node name="Label2" type="Label" parent="." unique_id=1610145004]
+offset_left = -28.029198
+offset_top = 5.255474
+offset_right = 19.970802
+offset_bottom = 28.255474
+text = "Blue: 0"
+
+[node name="Label3" type="Label" parent="." unique_id=1678795555]
+offset_left = -28.61314
+offset_top = -13.430655
+offset_right = 24.38686
+offset_bottom = 9.569345
+text = "Red: 0"

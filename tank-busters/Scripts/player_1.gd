@@ -4,6 +4,7 @@ const SPEED = 80.0
 var spawn_position = Vector2(0,130)
 var can_shoot = true
 var dead = false
+var score: int
 
 
 @onready var timer: Timer = $Timer
@@ -42,6 +43,7 @@ func _on_timer_timeout() -> void:
 	show()
 	dead = false
 	timer.stop()
+	Main.game_paused = false
 	
 func reload():
 	can_shoot = true

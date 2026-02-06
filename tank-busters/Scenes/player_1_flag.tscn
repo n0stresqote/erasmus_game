@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://tspo5i3iwljv"]
 
-[ext_resource type="Script" uid="uid://cutbccuu3kdy5" path="res://Scripts/collision_shape_2d.gd" id="1_5mnxj"]
+[ext_resource type="Script" uid="uid://bt0rei0lt7xxw" path="res://Scripts/player_1_flag.gd" id="1_5mnxj"]
 [ext_resource type="Texture2D" uid="uid://dr2nwcpknn0nc" path="res://Assets/tileset_arranged.png" id="1_kakhc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mnxj"]
@@ -39,11 +39,11 @@ animations = [{
 }]
 
 [node name="player1Flag" type="Area2D" unique_id=458339626]
+script = ExtResource("1_5mnxj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=742600052]
 position = Vector2(1, 0.5)
 shape = SubResource("RectangleShape2D_5mnxj")
-script = ExtResource("1_5mnxj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1688469751]
 position = Vector2(2, 0)
@@ -51,4 +51,4 @@ sprite_frames = SubResource("SpriteFrames_bvicc")
 autoplay = "default"
 frame_progress = 0.23696487
 
-[connection signal="body_entered" from="." to="CollisionShape2D" method="_on_player_1_flag_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -6,10 +6,12 @@ var seconds := 0
 var msec := 0
 
 func _process(delta: float) -> void:
-	total_time -= delta
+	if !Main.game_paused:
+		total_time -= delta
 
 	if total_time <= 0.0:
 		total_time = 0.0
+		get_tree().current_scene.get_node("result_screen").show()
 		get_tree().paused = true
 		return
 
