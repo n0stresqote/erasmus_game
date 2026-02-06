@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c132nvme8a7ub" path="res://Scenes/player_2_flag.tscn" id="8_344ge"]
 [ext_resource type="PackedScene" uid="uid://c2rgfgomwp0i0" path="res://Scenes/player_1_score_label.tscn" id="10_hptm8"]
 [ext_resource type="PackedScene" uid="uid://cjw2vhcjvsjsc" path="res://Scenes/result_screen.tscn" id="12_6iyac"]
+[ext_resource type="AudioStream" uid="uid://bdjwa8s16upj2" path="res://Assets/engine_running.mp3" id="14_jkdf5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8gbba"]
 distance = -175.0
@@ -122,3 +123,8 @@ position = Vector2(137, -136)
 
 [node name="result_screen" parent="." unique_id=443076436 instance=ExtResource("12_6iyac")]
 visible = false
+
+[node name="engine_sound" type="AudioStreamPlayer" parent="." unique_id=391193224]
+stream = ExtResource("14_jkdf5")
+volume_db = -15.0
+autoplay = true

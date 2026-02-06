@@ -7,9 +7,16 @@ var dead = false
 var score: int
 
 
+
 @onready var timer: Timer = $Timer
 
 @onready var marker_2d: Marker2D = $Marker2D
+
+@onready var shoot_sound: AudioStreamPlayer = $shoot_sound
+@onready var respawn_sound: AudioStreamPlayer = $respawn_sound
+@onready var death_sound: AudioStreamPlayer = $death_sound
+
+
 const BULLET = preload("res://Scenes/bullet.tscn")
 
 # arrow keys movement
@@ -28,10 +35,13 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-	if Input.is_key_pressed(KEY_KP_0):
+	if Input.is_action_just_pressed("1_shoot"):
 		shoot()
 
-func reset_player():
+func reset_player(play_death_sound):
+	if play_death_sound == true:
+		death_sound.play()
+
 	hide()
 	dead = true
 	global_position = Vector2(10000,10000)
@@ -44,17 +54,21 @@ func _on_timer_timeout() -> void:
 	dead = false
 	timer.stop()
 	Main.game_paused = false
+	respawn_sound.play()
 	
 func reload():
 	can_shoot = true
 	
 func shoot():
 	if can_shoot == true and dead == false:
+		shoot_sound.play()
 		var new_bullet = BULLET.instantiate()
 		new_bullet.position = marker_2d.global_position
 		new_bullet.direction = Vector2.UP.rotated(rotation)
 		new_bullet.shooter = self
 
+
 		can_shoot = false
 		get_tree().current_scene.add_child(new_bullet)
 		new_bullet.get_node("Sprite2D").rotation = rotation
+		

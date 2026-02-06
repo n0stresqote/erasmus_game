@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://6nfd4s8s3pee" path="res://Scripts/player_2.gd" id="1_wkcja"]
 [ext_resource type="Texture2D" uid="uid://c6db8xxm3ot88" path="res://Assets/playerRed.png" id="2_cgts5"]
+[ext_resource type="AudioStream" uid="uid://pbr8si6q1fpi" path="res://Assets/shooting_sound.mp3" id="3_n0kdt"]
+[ext_resource type="AudioStream" uid="uid://cocmkeodia3fc" path="res://Assets/respawn_sound.mp3" id="4_eus2p"]
+[ext_resource type="AudioStream" uid="uid://v2w3idf26jlv" path="res://Assets/death_sound.mp3" id="5_eus2p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkara"]
 size = Vector2(14, 14)
@@ -19,5 +22,16 @@ texture = ExtResource("2_cgts5")
 position = Vector2(0, -11)
 
 [node name="Timer" type="Timer" parent="." unique_id=1465169101]
+
+[node name="shoot_sound" type="AudioStreamPlayer" parent="." unique_id=2114190380]
+stream = ExtResource("3_n0kdt")
+volume_db = -20.0
+
+[node name="respawn_sound" type="AudioStreamPlayer" parent="." unique_id=1119214488]
+stream = ExtResource("4_eus2p")
+
+[node name="death_sound" type="AudioStreamPlayer" parent="." unique_id=615758968]
+stream = ExtResource("5_eus2p")
+volume_db = -15.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cl703xv2y4r2s" path="res://Assets/playerBlue.png" id="2_ndhuy"]
 [ext_resource type="AudioStream" uid="uid://pbr8si6q1fpi" path="res://Assets/shooting_sound.mp3" id="3_rliju"]
 [ext_resource type="AudioStream" uid="uid://cocmkeodia3fc" path="res://Assets/respawn_sound.mp3" id="4_l2cxq"]
-[ext_resource type="AudioStream" uid="uid://v2w3idf26jlv" path="res://Assets/death_sound.mp3" id="5_8k31v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ndhuy"]
 size = Vector2(14, 14)
@@ -32,7 +31,5 @@ volume_db = -20.0
 stream = ExtResource("4_l2cxq")
 
 [node name="death_sound" type="AudioStreamPlayer" parent="." unique_id=2028716386]
-stream = ExtResource("5_8k31v")
-volume_db = -15.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -15,9 +15,16 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body):
 	if body is TileMapLayer:
+
+		Main.play_wall_hit()
 		var tilemap := body as TileMapLayer
 		var tile_pos = tilemap.local_to_map(tilemap.to_local(global_position + direction * 2))
 		var tile_data = tilemap.get_cell_tile_data(tile_pos)
+		
+
+		
+
+
 
 		if tile_data:
 			var atlas_coords = tilemap.get_cell_atlas_coords(tile_pos)
@@ -33,7 +40,7 @@ func _on_body_entered(body):
 		
 
 	if body.is_in_group("players"):
-		body.reset_player()
+		body.reset_player(true)
 		print("Calling a reset function")
 		
 	shooter.reload()

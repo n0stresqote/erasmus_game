@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dhnf26fmty7ad" path="res://Scripts/player_2_flag.gd" id="1_hbqtw"]
 [ext_resource type="Texture2D" uid="uid://dr2nwcpknn0nc" path="res://Assets/tileset_arranged.png" id="2_s88lk"]
+[ext_resource type="AudioStream" uid="uid://cwqe8fnmu7cpe" path="res://Assets/flag_pick_up_sound.mp3" id="3_s88lk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mnxj"]
 size = Vector2(10, 15)
@@ -50,5 +51,8 @@ position = Vector2(2, 0)
 sprite_frames = SubResource("SpriteFrames_bvicc")
 autoplay = "default"
 frame_progress = 0.23696487
+
+[node name="pickup_sound" type="AudioStreamPlayer" parent="." unique_id=751859559]
+stream = ExtResource("3_s88lk")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
